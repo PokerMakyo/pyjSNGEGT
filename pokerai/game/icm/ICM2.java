@@ -26,7 +26,7 @@ import java.util.StringTokenizer;
 
 public class ICM2 {
 
-  public static String data = "E:\\JMA1.3\\src\\pokerai\\game\\icm\\evs.txt";
+  public static String data = "evs.txt";
   public static boolean DEBUGOMA = false;
 
   /**
