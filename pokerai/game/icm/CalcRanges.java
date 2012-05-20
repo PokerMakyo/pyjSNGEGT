@@ -158,9 +158,11 @@ public class CalcRanges {
   // oRanges: Calculation results, call and push ranges
   public void calc(int iPlayers, int[] iStacks, int iRaiserIndex, int iBB, int iAnte, boolean iNoSB, double iEVthreshold, double[] iPayoutStructure, int[] oRanges) {
 
-    System.out.println("iPlayers: " + iPlayers);
-    System.out.println("iRaiserIndex: " + iRaiserIndex);
-    System.out.println("iBB: " + iBB);
+    if (ICM2.DEBUGOMA) {
+        System.out.println("iPlayers: " + iPlayers);
+        System.out.println("iRaiserIndex: " + iRaiserIndex);
+        System.out.println("iBB: " + iBB);
+    }
 
     double weight = 0;
 
@@ -185,8 +187,11 @@ public class CalcRanges {
     }
 
     printICMarray();
-    for (int w = 0; w < iPlayers; w++)
-      System.out.print(ranges[w][NEW] + " ");
+    if (ICM2.DEBUGOMA) {
+        for (int w = 0; w < iPlayers; w++)
+          System.out.print(ranges[w][NEW] + " ");
+    }
+
     if (ICM2.DEBUGOMA) {
       System.out.println("\n******************************************");
     }
